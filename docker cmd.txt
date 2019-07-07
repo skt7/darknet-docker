@@ -1,0 +1,11 @@
+#build
+sudo docker build -t darknet .
+
+#tag
+sudo docker tag darknet:latest 447356764395.dkr.ecr.ap-southeast-1.amazonaws.com/yolo:latest
+
+#push
+sudo docker push 447356764395.dkr.ecr.ap-southeast-1.amazonaws.com/yolo
+
+#curl req
+curl -F "file=@1.jpg" http://localhost:8080/invocations
